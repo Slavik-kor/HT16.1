@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xml>
+<configuration monitorInterval="3">
+
+	<appenders>
+		<Console name="OUT" target="SYSTEM_OUT">
+			<Patternlayout pattern="%d{ABSOLUTE} [%-5p] (%F:%L) - %m%n" />
+		</Console>
+	</appenders>
+	<loggers>
+		<root level="warn">
+			<appender-ref ref="OUT" />
+		</root>
+		<logger name="FilmDaoImpl">
+			<appender-ref ref="OUT" />
+		</logger>
+	</loggers>
+</configuration>
