@@ -71,7 +71,7 @@ public class Port {
 
 		Berth berth = usedBerths.get(ship);
 		if (berth == null) {
-			throw new PortException("Try to use Berth without blocking.");
+			throw new PortException("Trying to use Berth without blocking.");
 		}
 		return berth;
 	}

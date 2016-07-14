@@ -20,11 +20,12 @@ public class Berth {
 		boolean result = false;
 
 		synchronized (portWarehouse) {
+
 			if (portWarehouse.addContainer(shipWarehouse.getContainer(numberOfConteiners))) {
 				result = true;
 			}
 		}
-
+		
 		return result;
 
 	}

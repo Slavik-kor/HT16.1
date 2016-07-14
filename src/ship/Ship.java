@@ -16,7 +16,6 @@ import warehouse.Warehouse;
 
 public class Ship implements Runnable {
 	private static final Logger LOGGER = LogManager.getLogger();
-	//private final static Logger logger = Logger.getRootLogger();
 	private volatile boolean stopThread = false;
 
 	private String name;
@@ -67,7 +66,7 @@ public class Ship implements Runnable {
 		Berth berth = null;
 		try {
 			isLockedBerth = port.lockBerth(this);
-			
+			System.out.println("Причал получен:"+isLockedBerth);
 			if (isLockedBerth) {
 				berth = port.getBerth(this);
 				LOGGER.warn("Корабль " + name + " пришвартовался к причалу " + berth.getId());
@@ -105,6 +104,7 @@ public class Ship implements Runnable {
 				+ " контейнеров на склад порта.");
 
 		result = berth.add(shipWarehouse, containersNumberToMove);
+		
 		
 		if (!result) {
 			LOGGER.warn("Недостаточно места на складе порта для выгрузки кораблем "

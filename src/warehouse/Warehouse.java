@@ -15,13 +15,13 @@ public class Warehouse {
 		this.size = size;
 	}
 
-	public boolean addContainer(Container container) {	
-		return containerList.add(container);
-	}
+	//public boolean addContainer(Container container) {	
+//		return containerList.add(container);
+	//}
 
 	public boolean addContainer(List<Container> containers) {
 		boolean result = false;
-		if(containerList.size() + containers.size() <= size){
+		if((containerList.size() + containers.size()) <= size){
 			result = containerList.addAll(containers);
 		}
 		return result;
