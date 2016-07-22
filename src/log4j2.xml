@@ -4,14 +4,14 @@
 
 	<appenders>
 		<Console name="OUT" target="SYSTEM_OUT">
-			<Patternlayout pattern="%d{ABSOLUTE} [%-5p] (%F:%L) - %m%n" />
+			<Patternlayout pattern="%d{ABSOLUTE} - %m%n" />
 		</Console>
 	</appenders>
 	<loggers>
 		<root level="warn">
 			<appender-ref ref="OUT" />
 		</root>
-		<logger name="FilmDaoImpl">
+		<logger name="port_">
 			<appender-ref ref="OUT" />
 		</logger>
 	</loggers>

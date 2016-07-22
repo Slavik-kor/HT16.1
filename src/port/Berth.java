@@ -25,7 +25,7 @@ public class Berth {
 				result = true;
 			}
 		}
-		
+
 		return result;
 
 	}
@@ -38,7 +38,6 @@ public class Berth {
 				result = true;
 			}
 		}
-
 		return result;
 	}
 
